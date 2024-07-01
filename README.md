@@ -1,50 +1,19 @@
-# Welcome to your Expo app 👋
+# HuSecurity's Webapp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is the WebApp built using React and Nexo. Ideally this will be easily translatable between Laptop, Android, IOS.
 
-## Get started
+## What is It?
 
-1. Install dependencies
+HuSecurity is a school scholarship project that connects to a external motion tracking camera. Ideally if the user wants to use their own camera I can put 
+the code ontop of their camera feed and the AI will still be able to detect humans. My external motion tracking camera is going to be made on a Raspberry Pi 4
+that will display the live feed to a undisclosed link which will then also be displayed on the app. This will also have a playback feature. 
 
-   ```bash
-   npm install
-   ```
+## Planned Features
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Login including Google/Other Sign Up option
+- Dedictated page for viewing camera connected to a live feed.
+- Playback Features
+- Multiple Cameras
+- Device Manager page for camera's
+- Ability for user to add own camera
+- User Control the motion tracked camera (Very Skeptical Additon) 
