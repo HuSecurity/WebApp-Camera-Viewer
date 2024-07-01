@@ -42,3 +42,15 @@ export const PageTitle = styled.text({
   colour: $(brand),
   padding: "10px",
 });
+
+export const SubTitle = styled.text({
+  'font-size': '30px',
+  'margin-bottom': '20px',
+  'letter-spacing': '1px',
+  'font-weight': 'bold',
+  colour: $(teritary),
+  })
+
+export const StyledFormArea = styled.view ({
+  width: '90%'
+})
