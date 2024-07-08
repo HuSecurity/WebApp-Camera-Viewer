@@ -44,7 +44,7 @@ export const PageTitle = styled.text({
 });
 
 export const SubTitle = styled.text({
-  'font-size': '30px',
+  'font-size': '18px',
   'margin-bottom': '20px',
   'letter-spacing': '1px',
   'font-weight': 'bold',
@@ -53,4 +53,7 @@ export const SubTitle = styled.text({
 
 export const StyledFormArea = styled.view ({
   width: '90%'
+  
 })
+
+export const StyledContainer = styled.TextInput
