@@ -10,4 +10,3 @@ This is the WebApp component built using React and Nexo. Ideally this will be ea
 - Multiple Cameras
 - Device Manager page for camera's
 - Ability for user to add own camera
-- User Control the motion tracked camera (Very Skeptical Additon) 
