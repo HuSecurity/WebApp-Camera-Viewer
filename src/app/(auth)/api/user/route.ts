@@ -1,28 +1,30 @@
-import { database } from "@/lib/database";
+import prisma from "@/lib/database";
 import { hash } from "bcrypt";
 import { NextResponse } from "next/server";
-import * as z from 'zod';
+import * as z from "zod";
 
-// Define a schema for user input validation 
-const userSchema = z
-  .object({
-    username: z.string().min(1, "Username is required").max(100),
-    email: z.string().min(1, "Email is required").email("Invalid email"),
-    password: z
-      .string()
-      .min(1, "Password is required")
-      .min(8, "Password must be more than 8 characters"),
-  })
+// Define a schema for user input validation
+const userSchema = z.object({
+  username: z.string().min(1, "Username is required").max(100),
+  email: z.string().min(1, "Email is required").email("Invalid email"),
+  password: z
+    .string()
+    .min(1, "Password is required")
+    .min(8, "Password must be more than 8 characters"),
+});
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { email, username, password } = userSchema.parse(body);
 
+    console.log("e");
+
     //  Checks if email already exists
-    const existingUserbyEmail = await database.user.findUnique({
+    const existingUserbyEmail = await prisma.user.findUnique({
       where: { email: email },
     });
+
     if (existingUserbyEmail) {
       return NextResponse.json(
         { user: null, message: "User with this email already exists" },
@@ -30,8 +32,10 @@ export async function POST(req: Request) {
       );
     }
 
+    console.log("ee");
+
     //  Checks if username already exists
-    const existingUserbyUsername = await database.user.findUnique({
+    const existingUserbyUsername = await prisma.user.findUnique({
       where: { username: username },
     });
     if (existingUserbyUsername) {
@@ -52,8 +56,10 @@ export async function POST(req: Request) {
     //     );
     //   }
 
+    console.log("eee");
+
     const encryptedPassword = await hash(password, 10);
-    const newUser = await database.user.create({
+    const newUser = await prisma.user.create({
       data: {
         username,
         email,
@@ -68,6 +74,8 @@ export async function POST(req: Request) {
       { status: 201 }
     );
   } catch (error) {
+    console.log(error);
+
     return NextResponse.json(
       { message: "Something went wrong" },
       { status: 500 }
