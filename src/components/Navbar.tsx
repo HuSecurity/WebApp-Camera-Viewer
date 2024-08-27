@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { Button, buttonVariants } from "./ui/button";
-import { Cctv } from "lucide-react";
+import { Cctv, User } from "lucide-react";
 import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { signOut } from "next-auth/react";
+import UserAccountnav from "./UserAccountnav";
 
 const Navbar = async () => {
   const session = await getServerSession(authOptions);
@@ -12,9 +13,9 @@ const Navbar = async () => {
       <div className="container flex items-center justify-between">
         <Link href="/">
           <Cctv className="text-slate-200" />
-        </Link> 
+        </Link>
         {session?.user ? (
-          <Button onClick={() => signOut()} variant='destructive'>Sign Out</Button>
+          <UserAccountnav/>
         ) : (
           <Link className={buttonVariants()} href="/sign-in">
             Sign In
