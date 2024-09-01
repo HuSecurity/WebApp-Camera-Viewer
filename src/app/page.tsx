@@ -8,16 +8,21 @@ export default async function Home() {
   const session = await getServerSession(authOptions);
   return (
     <div className="text-slate-200">
-      <h1 className="text-4xl text-slate-200">Home</h1>
-      <Link href="/admin" className={buttonVariants()}>
-        {" "}
-        Open My Admin{" "}
-      </Link>
+      <h1 className="text-4xl text-slate-200 text-center pb-7">
+        Welcome to HuSecurity
+      </h1>
 
-      <h2>Client Session</h2>
+      <div className="flex justify-center">
+        <Link href="/admin" className={buttonVariants()}>
+          {" "}
+          Open Up Camera View{" "}
+        </Link>
+      </div>
+
+      {/* <h2>Client Session</h2>
       <User/>
       <h2>Client Session</h2>
-      {JSON.stringify(session)}
+      {JSON.stringify(session)} */}
     </div>
   );
 }
