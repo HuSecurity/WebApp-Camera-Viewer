@@ -37,10 +37,12 @@ session_state      String?
 
 user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
+// Checks whether if the provider and providerAccountID are unique in the database
 @@unique([provider, providerAccountId])
  }
 
- model Session {
+// Adds data to database 
+model Session {
 id           String   @id @default(cuid())
 sessionToken String   @unique
 userId       String
@@ -48,6 +50,7 @@ expires      DateTime
 user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
  }
 
+// Can add image if I add the feature to update one later. 
 model User {
 id            String    @id @default(cuid())
 email   String   @unique

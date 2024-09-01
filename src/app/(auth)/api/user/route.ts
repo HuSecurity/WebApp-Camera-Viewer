@@ -58,6 +58,7 @@ export async function POST(req: Request) {
 
     console.log("eee");
 
+    // Encrypts password using BCrypt
     const encryptedPassword = await hash(password, 10);
     const newUser = await prisma.user.create({
       data: {
@@ -67,15 +68,19 @@ export async function POST(req: Request) {
       },
     });
 
+    // Sets password to newpassword which is linked to new user
     const { password: newUserPassword, ...rest } = newUser;
 
+    // Display created succesfully in console
     return NextResponse.json(
       { user: rest, message: "User created succesfully" },
       { status: 201 }
     );
+    // If error is caught a console log appears with error
   } catch (error) {
     console.log(error);
 
+    // Returns status 500 upon error
     return NextResponse.json(
       { message: "Something went wrong" },
       { status: 500 }

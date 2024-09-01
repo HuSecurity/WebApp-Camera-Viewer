@@ -43,11 +43,13 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
+        // If existing password is entered into sign in field it decrypts it compares
         if (existingUser.password) {
           const passwordMatch = await compare(
             credentials.password,
             existingUser.password
           );
+          // If password is correct return null in console
           if (!passwordMatch) {
             return null;
           }

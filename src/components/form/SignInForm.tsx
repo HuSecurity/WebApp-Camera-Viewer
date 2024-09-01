@@ -48,7 +48,7 @@ const SignInForm = () => {
     if (signInData?.error) {
       toast({
         title: "Sign In Failed",
-        description: "Something went wrong...",
+        description: "Invalid Email or Password",
         variant: 'destructive'
       });
     } else {
