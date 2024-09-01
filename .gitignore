@@ -36,5 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 # Virtual Env
-/venv
-/my_env
+/.venv/
+/my_env/
