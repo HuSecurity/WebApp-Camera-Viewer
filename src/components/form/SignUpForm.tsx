@@ -71,7 +71,7 @@ const SignUpForm = () => {
 
   return (
     <Form {...form}>
-      <h2 className="text-sm font-bold text-center italic">Welcome to</h2>
+      <h2 className="font-bold text-center italic">Welcome to</h2>
       <h2 className="text-center font-bold text-6xl font-sans pb-3">HuSecurity</h2>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
         <div className="space-y-2">
@@ -158,7 +158,7 @@ const SignUpForm = () => {
       >
         or
       </div>
-      <GoogleSignInButton>Sign Up with Google</GoogleSignInButton>
+      {/* <GoogleSignInButton>Sign Up with Google</GoogleSignInButton> */}
       <p className="text-center text-sm text-gray-600 mt-2">
         If you have an have an account, please&nbsp;
         <Link className="text-blue-500 hover:underline" href="/sign-in">

@@ -59,7 +59,7 @@ const SignInForm = () => {
 
   return (
     <Form {...form}>
-      <h2 className="text-sm font-bold text-center italic">Welcome back to</h2>
+      <h2 className="font-bold text-center italic">Welcome back to</h2>
       <h2 className="text-center font-bold text-6xl font-sans pb-3">HuSecurity</h2>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full">
         <div className="space-y-2">
