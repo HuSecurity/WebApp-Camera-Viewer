@@ -1,4 +1,4 @@
-- Login including Google/Other Sign Up option
+- Login and Sign Up
 - Dedictated page for viewing camera connected to a live feed.
 - Playback Features
 - Multiple Cameras
