@@ -9,9 +9,9 @@ const page = async () => {
     return (
       <div className="ratio ratio16x9">
         <Container>
-          <h2 className="text-slate-200  text-center font-semibold text-bg">
+          {/* <h2 className="text-slate-200  text-center font-semibold text-bg">
             Camera Live Feed
-          </h2>
+          </h2> */}
           <iframe
             width="1080"
             height="608"
@@ -19,7 +19,6 @@ const page = async () => {
             className="rounded-lg"
             allow="autoplay"
           ></iframe>
-          <h2 className="text-red-600 font-semibold">Will be completed for Scholarship</h2>
         </Container>
       </div>
     );
