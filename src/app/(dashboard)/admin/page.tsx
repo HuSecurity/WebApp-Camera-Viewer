@@ -15,7 +15,7 @@ const page = async () => {
           <iframe
             width="1080"
             height="608"
-            src="https://www.youtube.com/embed/ByED80IKdIU?si=KmkJvZEgqBkjkSss"
+            src="https://www.youtube.com/watch?v=3xmXrhoSzik"
             className="rounded-lg"
             allow="autoplay"
           ></iframe>
