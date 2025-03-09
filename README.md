@@ -4,3 +4,4 @@
 - Multiple Cameras
 - Device Manager page for camera's
 - Ability for user to add own camera
+# DEPRECATED
